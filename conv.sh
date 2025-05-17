@@ -39,7 +39,7 @@ find "$INPUT_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png"
       magick "$img" -format "%h" info: | {
         read heightr
         widthr=$(awk "BEGIN { printf \"%.0f\", $heightr / 0.8 }")
-        magick "$img" -gravity center -background white -extent ${widthr}x$heightr "$out_file"
+        magick "$img" -gravity center -background white -extent ${widthr}x$heightr -quality 100  "$out_file"
       }
       
 #--------------------------
@@ -50,11 +50,11 @@ find "$INPUT_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png"
 
 
     else
-      magick "$img" "$out_file"
+      magick -quality 100  "$img" "$out_file"
     fi
     
     echo "resizing $out_file"
-    magick "$out_file" -resize '1200x>' "$out_file"
+    magick  -quality 100 "$out_file" -resize '1200x>' "$out_file"
 
 
     # Convert image
