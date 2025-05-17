@@ -1,0 +1,5 @@
+/Users/shawn/Documents/scripts/imageMax-2.0-main/comp_30.sh
+/Users/shawn/Documents/scripts/imageMax-2.0-main/comp_50.sh
+/Users/shawn/Documents/scripts/imageMax-2.0-main/comp_80.sh
+/Users/shawn/Documents/scripts/imageMax-2.0-main/conv.sh
+/Users/shawn/Documents/scripts/imageMax-2.0-main/imagemax.sh
